@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class evenOdd_in_Array {
+    public static void main(String[] args) {
+     Scanner s = new Scanner(System.in);
+     int evensum = 0;
+     int oddsum = 0 ;
+        System.out.println("Enter x or stop to Exit");
+        System.out.print("Enter your numbers : ");
+     while(s.hasNextInt()) {
+         int num = s.nextInt();
+
+         if(num%2 == 0 ) {
+             evensum += num;
+         }
+         else {
+             oddsum += num;
+         }
+     }
+     System.out.println("Sum of even numbers are : " + evensum);
+        System.out.println("Sum of Odd numbers are : " + oddsum);
+        s.close();
+    }
+}
