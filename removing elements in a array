@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class removing_array_elements {
+    public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    int size = s.nextInt();
+    int arr[] = new int[size];
+
+    for (int i=0 ; i<arr.length; i++) {
+         arr[i] = s.nextInt();
+    }
+        System.out.println("Enter element to be removed");
+    int remove = s.nextInt();
+
+    for(int r = remove ; r<arr.length-1; r++) {
+        arr[r] = arr[r+1];
+    }
+
+        System.out.print("array with removed elements are: [");
+    for(int i = 0 ;i< arr.length-1;i++) {
+       System.out.print (arr[i]) ;
+       if(i<arr.length-1) {
+           System.out.print(", ");
+       }
+       else {
+           System.out.println(arr[i]);
+       }
+    }
+    System.out.print("]");
+    }
+}
