@@ -1,0 +1,35 @@
+package Array_reversing;
+import java.util.Scanner;
+public class Array_reversing {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner (System.in);
+		System.out.print("Enter array size :");
+		int size = s.nextInt();
+		int[] arr = new int[size];
+		
+		for(int i = 0 ; i < arr.length ; i++) {
+			System.out.print("Enter array elements : ");
+			arr[i] = s.nextInt();
+		}
+		System.out.print("array is : [");
+		for(int i=0 ; i<arr.length ; i++) {
+			System.out.print(arr[i]);
+			if(i != arr.length-1) {
+				System.out.print(",");
+			}
+		}
+		System.out.print("]");
+		System.out.println();
+		
+		System.out.print("reveresed array is : [");
+		for(int i = size-1; i>=0 ; i--) {
+			System.out.print(arr[i]);
+			if(i != 0) {
+				System.out.print(",");
+			}
+		}
+		System.out.print("]");
+	}
+
+}
