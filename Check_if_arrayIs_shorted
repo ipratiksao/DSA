@@ -1,0 +1,29 @@
+package Questions;
+import java .util.Scanner;
+public class Check_if_short {
+
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter number of elements in an array: ");
+		int n = s.nextInt();
+		int arr[] = new int[n];
+		for (int i =0; i<arr.length;i++) {
+			System.out.print("Enter element no " + (i +1) + ": ");
+			arr[i] = s.nextInt();
+		}
+		boolean shor = true;
+		for (int i = 0 ; i<arr.length-1; i++) {
+			if(arr[i] > arr[i+1]) {
+				shor = false;
+			}
+			
+		}
+		if (shor) {
+			System.out.println("Array is shorted !");
+		} else {
+			System.out.println("Array is not Shorted !");
+		}
+	}
+
+}
