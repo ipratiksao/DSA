@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import  java.util.Scanner;
+
+public class elements_common_in_two_array {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter size of 1 st array list: ");
+        int size1 = s.nextInt();
+        System.out.print("Enter size of 2 nd array list: ");
+        int size2 = s.nextInt();
+        int [] a = new int[size1];
+        for(int i =0 ;i <size1; i++) {
+            System.out.print("Enter elements of 1 st array list " + (i+1) + " : ");
+            a[i] = s.nextInt();
+        }
+        int [] b = new int[size2];
+        for(int i =0 ;i <size2; i++) {
+            System.out.print("Enter elements of 2 nd array list " + (i+1) + " : ");
+            b[i] = s.nextInt();
+        }
+        Arrays.sort(a);
+        Arrays.sort(b);
+        int i =0 , j =0;
+        ArrayList<Integer> ans = new ArrayList<>();
+        while (i<a.length && j<b.length) {
+            if(a[i] == b[j]) {
+                ans.add(a[i]);
+                i++;
+                j++;
+            } else if(a[i]< b[j]) i++;
+             else  j++ ;
+        }
+        System.out.println(ans);
+    }
+}
