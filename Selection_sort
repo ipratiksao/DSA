@@ -1,0 +1,27 @@
+
+public class Selection_sort {
+    public static void Selection_sort(int[] arr) {
+        for (int ele : arr) {
+            System.out.print(ele + " " );
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {8,7,9,2,3,1,5,4,6};
+        Selection_sort(arr);
+        for (int i =0 ; i <arr.length -1; i++) {
+            int min =i ;
+            for (int j = i+1 ;j < arr.length; j++) {
+                if (arr[min] > arr[j]) {
+                    min =j ;
+                }
+            }
+            int temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+            Selection_sort(arr); // shows in number of steps
+        }
+       // Selection_sort(arr);  // shows final result
+    }
+}
