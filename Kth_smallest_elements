@@ -1,0 +1,20 @@
+// can be done using selection sort
+
+public class min_kth_element {
+    public static void main() {
+        int[] arr = {2,5,6,3,1,4};
+        int k = 4;
+        for (int i =0 ; i<k; i++) {
+            int min = i;
+            for(int j = i+1; j< arr.length; j++) {
+                if(arr[min] > arr[j]) {
+                    min = j;
+                }
+            }
+            int temp = arr[i];
+            arr[i] =  arr [min];
+            arr[min] = temp;
+        }
+        System.out.println(arr[k-1]);
+    }
+}
