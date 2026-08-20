@@ -1,0 +1,47 @@
+package matrix;
+import java.util.Scanner;
+
+public class sum_of_matrix {
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		int r,c;
+		System.out.println("Enter number of rows");
+		r = s.nextInt();
+		System.out.println("Enter number of columns");
+		c = s.nextInt();
+		int A[][] = new int[r][c];
+		int B[][] = new int[r][c];
+		int C[][] = new int[r][c];
+		System.out.println("Enter values of matrix A:");
+		for (int i =0; i<r; i++) {
+			for(int j =0; j<r ; j++) {
+				 A[i][j] = s.nextInt();
+			}
+		}
+		System.out.println("Enter values of matrix B:");
+		for (int i =0; i<r; i++) {
+			for(int j =0; j<r ; j++) {
+				 B[i][j] = s.nextInt();
+			}
+		}
+		
+		for (int i =0; i<r; i++) {
+			for(int j =0; j<r ; j++) {
+				 C[i][j] = A[i][j] + B[i][j];
+			}
+		}
+		System.out.println("Sum of matrix A + B :");
+		for (int i =0; i<r; i++) {
+			for(int j =0; j<r ; j++) {
+				 System.out.print(C[i][j] + " ");
+			}
+			System.out.println();
+		}
+
+		
+		
+	}
+
+}
